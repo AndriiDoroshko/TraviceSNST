@@ -1,7 +1,10 @@
 language: swift
 osx_image: xcode9.1
 xcode_workspace: PlayerControls
-
+cache:
+  directories:
+    -$HOME/Demo/Tests/FailureDifferences
+   
 before_install:
 - brew update
 - brew install sourcery
