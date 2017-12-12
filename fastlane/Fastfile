@@ -8,11 +8,13 @@ platform :ios do
 
   desc "Runs all the snapshot tests on selected devices"
   lane :verify do
-    scan(fail_build: false, scheme: "Demo", device: "iPad Pro (12.9-inch)")
+    scan(fail_build: false, scheme: "Verify", device: "iPad Pro (12.9-inch)")
+    scan(fail_build: false, scheme: "Verify", device: "iPhone 8")
  end
 
   desc "Rewrites all existing snapshots on selected devices"
   lane :record do
     scan(fail_build: false, scheme: "Record", device: "iPad Pro (12.9-inch)")
+    scan(fail_build: false, scheme: "Record", device: "iPhone 8")
   end
 end

@@ -5,11 +5,8 @@ xcode_workspace: PlayerControls
 before_install:
 - brew update
 - brew install sourcery
-- brew install carthage
-- cd Demo
-- carthage update --platform iOS
 - brew cask install fastlane
+- git submodule update --init --recursive
 
 script:
-- cd ..
 - fastlane verify
